@@ -1,0 +1,81 @@
+{
+    "sections": {
+      "Reading": {
+        "Comprehension_Passage": {
+          "Total Marks": 10,
+          "Questions": {
+            "MCQs": {
+              "Marks": 1,
+              "Evaluation_Criteria": "Correct answer as per passage"
+            },
+            "Short Answers": {
+              "Marks": 2,
+              "Evaluation_Criteria": "Concise, relevant to passage, correct grammar"
+            },
+            "Inference-based": {
+              "Marks": 3,
+              "Evaluation_Criteria": "Logical reasoning, contextual understanding"
+            }
+          }
+        }
+      },
+      "Writing": {
+        "Formal_Letter": {
+          "Total Marks": 5,
+          "Evaluation_Criteria": {
+            "Format": 1,
+            "Content": 2,
+            "Expression": 2
+          }
+        },
+        "Analytical_Paragraph": {
+          "Total Marks": 5,
+          "Evaluation_Criteria": {
+            "Introduction": 1,
+            "Data Analysis": 2,
+            "Conclusion": 2
+          }
+        }
+      },
+      "Grammar": {
+        "Gap_Filling": {
+          "Total Marks": 2,
+          "Evaluation_Criteria": "Correct use of grammar"
+        },
+        "Editing": {
+          "Total Marks": 2,
+          "Evaluation_Criteria": "Corrected word should be accurate"
+        },
+        "Omission": {
+          "Total Marks": 2,
+          "Evaluation_Criteria": "Missing word must fit context"
+        }
+      },
+      "Literature": {
+        "Extract-based Questions": {
+          "Total Marks": 6,
+          "Evaluation_Criteria": {
+            "Correct Interpretation": 2,
+            "Reference to Context": 2,
+            "Expression & Grammar": 2
+          }
+        },
+        "Short Answer (30-40 words)": {
+          "Total Marks": 3,
+          "Evaluation_Criteria": {
+            "Relevant Answer": 2,
+            "Grammar": 1
+          }
+        },
+        "Long Answer (100-120 words)": {
+          "Total Marks": 5,
+          "Evaluation_Criteria": {
+            "Content": 2,
+            "Expression": 2,
+            "Grammar": 1
+          }
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,126 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f1e7;
+    margin: 0;
+}
+
+.chat-container {
+    width: 750px;
+    background-color: #1b260c;
+    border: 10px solid #785601;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.chat-box {
+    height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+    background-color: #1b260c;
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-box::-webkit-scrollbar {
+    width: 8px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.chat-box:hover::-webkit-scrollbar {
+    opacity: 1;
+}
+
+.chat-box::-webkit-scrollbar-track {
+    background: #2d3814;
+    border-radius: 10px;
+}
+
+.chat-box::-webkit-scrollbar-thumb {
+    background: rgba(137, 137, 125, 0.41);
+    border-radius: 10px;
+}
+
+.message {
+    max-width: 80%;
+    padding: 10px;
+    border-radius: 15px;
+    margin: 5px;
+    display: inline-block;
+    word-wrap: break-word;
+}
+
+.user-message {
+    background-color: rgba(212, 211, 195, 0.41);
+    font-family: 'Poppins', sans-serif; 
+    color: white;
+    align-self: flex-end;
+    text-align: right;
+}
+
+.ai-message {
+    background-color: rgba(137, 137, 125, 0.41);
+    font-family: 'Poppins', sans-serif; 
+    color: white;
+    align-self: flex-start;
+    text-align: left;
+}
+
+.input-container {
+    display: flex;
+    margin-top: 10px;
+}
+
+input {
+    flex: 1;
+    padding: 8px;
+    border-radius: 25px;
+    border: 1px solid  #785601;
+}
+
+button {
+    background-color: #b8860b;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    margin-left: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color:  #785601; 
+    transform: scale(1.05); 
+}
+.chatbot-icon {
+    position: fixed;
+    bottom: 195px;
+    left: 333px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    background-color: none;
+    border-radius: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    z-index: 100;
+}
+
+.chatbot-icon img {
+    width: 100px;
+    height: 150px;
+    object-fit: auto;
+    
+}
+
+.chat-container.closed {
+    display: none;
+}
