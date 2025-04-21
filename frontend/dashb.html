@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EvalEdge Dashboard</title>
+  <link rel="stylesheet" href="dashb.css" />
+</head>
+<body>
+  <div class="scroll-container">
+    <!-- all your content here -->
+  <header>
+    <div class="header-left">
+      <img src="Assets/logo__.png" alt="Logo" />
+    </div>
+    <div class="header-center">"EvalEdge, An AI Assistant giving students and teachers a new edge in evaluations."</div>
+    <div class="header-icons">
+      <img src="Assets/dark_mode_icon.png" alt="Dark Mode" onclick="toggleDarkMode()"/>
+      <img src="Assets/notification_icon.png" alt="Notifications"/>
+      <img src="Assets/profile_icon.png" alt="Profile"/>
+    </div>
+  </header>
+
+  <div class="container">
+    <aside class="sidebar" id="sidebar">
+      <div class="toggle-btn" onclick="toggleSidebar()"></div>
+      <div class="menu-item">
+        <img src="Assets/dashboard_icon.png" alt="Chatbot"/>
+        <span class="menu-text">Dashboard</span>
+      </div>
+      <div class="menu-item">
+        <img src="Assets/aichatbot_db_icon.png" alt="Analysis"/>
+        <span class="menu-text" id="aiBotText" style="cursor: pointer;">AI Chatbot</span>
+      </div>
+      <div class="menu-item">
+        <img src="Assets/classroom_icon.png" alt="Homework"/>
+        <span class="menu-text">Classroom</span>
+      </div>
+      <div class="menu-item">
+        <img src="Assets/answesheet_analysis_icon.png" alt="Reports"/>
+        <span class="menu-text">Answersheet Analysis</span>
+      </div>
+      <div class="menu-item">
+        <img src="Assets/report_icon.png" alt="Study Material"/>
+        <span class="menu-text">Reports</span>
+      </div>
+      <div class="sign-out" onclick="signOut()">Sign Out</div>
+    </aside>
+
+    <main>
+      <div class="user-info">
+        <img src="Assets/illus.png" alt="User Illustration">
+        <div class="user-card">
+          <h2>WELCOME USERNAME</h2>
+          <p>Class 10</p>
+          <p class="motivational-quote" id="quote">“The future belongs to those who believe in the beauty of their dreams.”</p>
+        </div>
+      </div>
+
+      <!-- Feature Cards -->
+      <div class="feature-card">
+        <div class="card-text">
+          <h3> AI Chatbot</h3>
+          <p>“Evaluate. Learn. Improve.”</p>
+          <P>Get instant feedback, ideal answers, and chapter-wise summaries powered by AI — all aligned to NCERT syllabus.</p>
+        </div>
+        <img src="Assets/aibot_illus.png" alt="Illustration">
+      </div>
+
+      <div class="feature-card">
+        <div class="card-text">
+          <h3>Answersheet Analysis</h3>
+          <p>“AI Checks. CBSE Criteria. Real Results.”</p>
+          <P> Upload your answersheets to get marks and feedback instantly, just like a real evaluator would.</p>
+        </div>
+        <img src="Assets/answersheet_illus.png" alt="Illustration">
+      </div>
+      <div class="feature-card">
+        <div class="card-text">
+          <h3>Performance Tracker</h3>
+          <p> “Your Progress, Visualized.”</p>
+          <P> See how you're doing with detailed academic reports, feedback summaries, and improvement paths.</p>
+        </div>
+        <img src="Assets/report_illus.png" alt="Illustration">
+      </div>
+      <div class="feature-card">
+        <div class="card-text">
+          <h3>Smart Classroom</h3>
+          <p>“Organized Learning in One Place.”</p>
+          <P>Access assignments, class notes, and study resources shared by your teacher — anytime, anywhere.</p>
+        </div>
+        <img src="Assets/classroom__illus.png" alt="Illustration">
+      </div>
+      
+      
+      
+
+     
+    </main>
+  </div>
+
+  <!-- Fixed AI Bot Image -->
+  <div class="ai-bot-fixed">
+    <img id="aiBotImage" src="Assets/aibot.png" alt="AI Bot" style="cursor: pointer;" />
+  </div>
+</div>
+
+  <script src="dashb.js"></script>
+</body>
+</html>

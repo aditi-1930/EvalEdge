@@ -1,0 +1,328 @@
+:root {
+    --primary-bg: #fdf6ec;
+    --primary-text: #2d3e50;
+    --sidebar-bg: #1a1a1a;
+    --highlight: #ffffff;
+    --hover-bg: #2a2a2a;
+    --shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
+  }
+  
+  body.dark {
+    --primary-bg: #121212;
+    --primary-text: #e0e0e0;
+    --sidebar-bg: #1c1c1c;
+    --highlight: #d1cfcf;
+    --hover-bg: #2a2a2a;
+    --shadow: 4px 4px 12px rgba(0, 0, 0, 0.6);
+  
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
+  }
+  
+  body.dark .user-card,
+  body.dark .feature-card {
+    background: #1e1e1e;
+    border: 1px solid #333;
+    color: var(--primary-text);
+  }
+  
+  body.dark .sign-out {
+    background-color: #6e5520;
+    border-color: #4a3511;
+    color: #fff;
+  }
+  
+  body.dark .sign-out:hover {
+    background-color: #8a6a2b;
+  }
+  
+  body.dark .menu-item:hover {
+    background-color: var(--hover-bg);
+  }
+  
+  body.dark header {
+    background-color: #181818;
+    border-bottom: 1px solid #2c2c2c;
+  }
+  body.dark .sidebar {
+    background-color: #222020;
+  }
+  body.dark .header-icons {
+    filter: brightness(0) invert(1);
+  }
+  body.dark .header-left {
+    filter: brightness(0) invert(1);
+  }
+  
+  
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-bg);
+    padding: 5px 15px;
+    border-bottom: 2px solid #ccc;
+    height: 60px;
+    box-shadow: var(--shadow);
+  }
+  
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .header-left img {
+    height: 35px;
+  }
+  
+  .header-center {
+    flex-grow: 1;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .header-icons {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+  }
+  
+  .header-icons img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+  
+  .container {
+    display: flex;
+  }
+  
+  .sidebar {
+    width: 250px;
+    background-color: #0b1502;
+    color: white;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    position: relative;
+    box-shadow: var(--shadow);
+    border-right: 5px solid #8a6320;
+
+  }
+  
+  .sidebar.collapsed {
+    width: 80px;
+  }
+  
+  .toggle-btn {
+    position: absolute;
+    top: 20px;
+    left: 220px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid var(--highlight);
+    cursor: pointer;
+    transition: left 0.3s ease;
+  }
+  
+  .sidebar.collapsed .toggle-btn {
+    left: 50px;
+    transform: rotate(180deg);
+  }
+  
+  .menu-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .menu-item:hover {
+    background-color: #626a59
+  }
+  
+  .menu-item img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .menu-text {
+    white-space: nowrap;
+  }
+  
+  .sidebar.collapsed .menu-text {
+    display: none;
+  }
+  
+  main {
+    flex: 1;
+    padding: 30px;
+    min-height: 90vh;
+  }
+  
+  .user-info {
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+  }
+  .user-info img {
+    height: 120px; 
+    width: auto;   
+  }
+  
+  .user-card {
+    background: white;
+    border: 2px solid black;
+    padding: 20px;
+    border-radius: 8px;
+    color: black;
+    text-align: center;
+    position: relative;
+    box-shadow: var(--shadow);
+  }
+  
+  .user-card h2, .user-card p {
+    margin: 5px 0;
+  }
+  
+  .user-card img {
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 30px;
+  }
+  
+  .feature-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  width: 80%;
+  box-shadow: var(--shadow);
+  gap: 20px;
+  overflow: hidden; /* Make sure image can touch edge */
+}
+
+.feature-card img {
+  width: 160px; /* or whatever width you want */
+  height: auto;
+  object-fit: cover;
+  margin-right: -20px; /* Negative margin to cancel padding */
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+
+  .feature-card:nth-child(odd) {
+    flex-direction: row-reverse;
+    text-align: right;
+  }
+  .feature-card img {
+    width: auto;
+    height: 120px; 
+    object-fit: cover; 
+    object-position: center; 
+    border-radius: 8px; 
+    margin-right: auto;
+  }
+  
+  
+  
+  .card-text {
+    flex: 1;
+  }
+  
+  .sign-out {
+    padding: 8px;
+    text-align: center;
+    background-color: #a37526;
+    cursor: pointer;
+    font-size: 14px;
+    width: 75px;
+    margin: 10px auto;
+    border-radius: 5px;
+    border : 1.5px solid #4a3511;
+    box-shadow: var(--shadow);
+    position: fixed;
+    bottom: 20px;  
+    left: 15px;
+
+  }
+  
+  .sign-out:hover {
+    background-color:  #8e6725;
+  }
+  .sidebar.collapsed .sign-out{
+    display: none;
+  }
+  
+  .ai-bot-fixed {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 100px;        
+    height: 150;
+    z-index: 999;
+    
+  }
+  
+  .ai-bot-fixed img {
+    width: 100%;
+    height: 100%;     
+    object-fit: contain;
+  }
+
+body, html {
+  overflow-x: hidden;
+}
+
+.scroll-container {
+  height: 100vh;
+  overflow-y: auto;
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+}
+
+.scroll-container::-webkit-scrollbar {
+  width: 0;
+}
+
+.scroll-container:hover::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: transparent;
+  margin-block: 60px; 
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+.scroll-container::-webkit-scrollbar-thumb {
+  transition: background-color 0.3s ease;
+}
+

@@ -5,21 +5,24 @@ import { fileURLToPath } from "url";
 import { processQuery } from "./api.js";
 
 const app = express();
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(filename);
+
+// 🔥 Serve dashb.html first before static
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "frontend", "dashb.html"));
+});
+
+// ✅ Static files (CSS, JS, images)
+app.use(express.static(path.join(__dirname, "frontend")));
 
 app.use(cors());
 app.use(express.json());
-app.use(express.static(path.join(__dirname, "frontend")));
 
 app.post("/chat", async (req, res) => {
   const { question, studentAnswer } = req.body;
   const result = await processQuery(question, studentAnswer || "");
   res.json(result);
-});
-
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "frontend", "index.html"));
 });
 
 app.listen(5000, () => {

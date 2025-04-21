@@ -30,4 +30,15 @@ async function sendMessage() {
   document.getElementById("user-input").addEventListener("keypress", function (e) {
     if (e.key === "Enter") sendMessage();
   });
+  document.getElementById("aiBotText").addEventListener("click",toggleChat);
+  function toggleChat() {
+    window.location.href = "dashb.html";
+  }
+
+  document.getElementById("aiBotText").addEventListener("click", goToChatbot);
+
+function goToChatbot() {
+  window.location.href = "dashb.html";
+}
+
   
